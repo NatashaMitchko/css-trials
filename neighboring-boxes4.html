@@ -2,6 +2,9 @@
 <html>
 <head>
     <style>
+    /*could have done this more elegantly using nexted styles
+    with div .light-grey
+    */
         div {
             background-color: #555555;
             height: 130px;
@@ -9,18 +12,41 @@
             margin-bottom: 10px;
         }
 
-        .boxes {
+        .light-grey {
             display: inline-block;
-            background-color: #cccccc;
+            background-color: #cccccc;            
+        }
+        .boxes {
             vertical-align: middle;
             width: 192px;
             height: 90%;
             margin: 6px 0 6px 6px;
-/*            width: 33%;
-            margin-left: auto;
-            margin-right: auto;*/
                     }
 
+        .short-boxes {
+            vertical-align: top;
+            width: 142.5px;
+            height: 75px;
+            margin: 6px 0 6px 6px;
+        }
+
+        .taller-boxes {
+            vertical-align: top;
+            width: 142.5px;
+            height: 100px;
+            margin: 6px 0 6px 6px;   
+        }
+
+        .two-boxes {
+            vertical-align: bottom;
+            width: 291px;
+            height: 90%;
+            margin: 6px 0 6px 6px;
+                    }
+
+        #shortest {
+            height: 35px;
+        }
 
     </style>
     <title></title>
@@ -31,18 +57,19 @@
 <!-- had to comment out white space to eliminate it from displaying between
 the divs -->
     <div><!-- 
-     --><div class="boxes"></div><!-- 
-     --><div class="boxes"></div><!-- 
-     --><div class="boxes"></div><!-- 
+     --><div class="boxes light-grey"></div><!-- 
+     --><div class="boxes light-grey"></div><!-- 
+     --><div class="boxes light-grey"></div><!-- 
   --></div>
-    <div>
-<!--         <div class="boxes"></div>
-        <div class="boxes"></div>
-        <div class="boxes"></div>
-        <div class="boxes"></div>
- -->    </div>
-    <div>
-<!--         <div class="boxes"></div>
-        <div class="boxes"></div>
- -->    </div>
+    <div><!-- 
+     --><div class="taller-boxes light-grey"></div><!-- 
+     --><div class="short-boxes light-grey"></div><!-- 
+     --><div class="taller-boxes light-grey"></div><!-- 
+     --><div class="short-boxes light-grey"></div><!-- 
+ --></div>
+    <div><!-- 
+     --><div class="two-boxes light-grey" id="shortest"></div><!-- 
+     --><div class="two-boxes light-grey"></div><!-- 
+  --></div>
+
 </html>
